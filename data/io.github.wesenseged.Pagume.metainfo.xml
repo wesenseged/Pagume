@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component type="desktop-application">
+    <metadata_license>CC0-1.0</metadata_license>
+
+  <id>io.github.wesenseged.Pagume</id>
+  <name>Pagume</name>
+  <summary>Ethiopian Calendar</summary>
+
+  <description>
+  <p>Pagume is an offline calendar that shows local dates, holidays, and fasting seasons, helping you stay connected to the traditional calendar alongside your modern desktop.</p>
+  </description>
+
+
+<developer id="wesen.vercel.app">
+  <name>Abenezer Wesenseged</name>
+</developer>
+
+
+  <launchable type="desktop-id">io.github.wesenseged.Pagume.desktop</launchable>
+
+  <url type="homepage">https://github.com/wesenseged/Pagume</url>
+  <url type="bugtracker">https://github.com/wesenseged/Pagume/issues</url>
+  <url type="vcs-browser">https://github.com/wesenseged/Pagume</url>
+
+   <branding>
+      <color type="primary" scheme_preference="light">#FAD6D6</color>
+      <color type="primary" scheme_preference="dark">#F67474</color>
+  </branding>
+
+
+  <screenshots>
+    <screenshot type="default">
+      <image>https://raw.githubusercontent.com/wesenseged/Pagume/main/screenshots/Calendar.png</image>
+          <caption>Calendar</caption>
+    </screenshot>
+    <screenshot >
+      <image>https://raw.githubusercontent.com/wesenseged/Pagume/main/screenshots/Holiday.png</image>
+    <caption>Holiday (dark mode)</caption>
+    </screenshot>
+    <screenshot >
+      <image>https://raw.githubusercontent.com/wesenseged/Pagume/main/screenshots/About.png</image>
+          <caption>About (dark mode)</caption>
+    </screenshot>
+  </screenshots>
+
+  <content_rating type="oars-1.1"/>
+
+  <provides>
+    <binary>Pagume</binary>
+  </provides>
+
+  <project_license>GPL-3.0-only</project_license>
+
+<releases>
+  <release version="0.0.1" date="2025-11-13">
+    <url type="details">https://github.com/wesenseged/Pagume/releases/tag/0.0.1</url>
+    <description>
+      <p>Initial public release of Pagume for KDE and Flathub</p>
+    </description>
+  </release>
+</releases>
+
+</component>
+

@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=Pagume
+Exec=Pagume
+Icon=io.github.wesenseged.Pagume
+Type=Application
+Terminal=false
+Categories=Utility
+
