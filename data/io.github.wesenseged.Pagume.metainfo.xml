@@ -23,8 +23,8 @@
   <url type="vcs-browser">https://github.com/wesenseged/Pagume</url>
 
    <branding>
-      <color type="primary" scheme_preference="light">#FAD6D6</color>
-      <color type="primary" scheme_preference="dark">#F67474</color>
+      <color type="primary" scheme_preference="light">#FAE9D6</color>
+      <color type="primary" scheme_preference="dark">#F09338</color>
   </branding>
 
 
@@ -52,6 +52,14 @@
   <project_license>GPL-3.0-only</project_license>
 
 <releases>
+
+  <release version="0.0.2" date="2025-11-13">
+    <url type="details">https://github.com/wesenseged/Pagume/releases/tag/0.0.2</url>
+    <description>
+      <p>Update branding color and add keywords</p>
+    </description>
+  </release>
+
   <release version="0.0.1" date="2025-11-13">
     <url type="details">https://github.com/wesenseged/Pagume/releases/tag/0.0.1</url>
     <description>
@@ -59,6 +67,12 @@
     </description>
   </release>
 </releases>
+
+<keywords>
+  <keyword>Ethiopia</keyword>
+  <keyword>Amharic</keyword>
+  <keyword>Calendar</keyword>
+</keywords>
 
 </component>
 
