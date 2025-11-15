@@ -4,7 +4,7 @@
 
   <id>io.github.wesenseged.Pagume</id>
   <name>Pagume</name>
-  <summary>Ethiopian Calendar</summary>
+  <summary>Ethiopian calendar</summary>
 
   <description>
   <p>Pagume is an offline calendar that shows local dates, holidays, and fasting seasons, helping you stay connected to the traditional calendar alongside your modern desktop.</p>
@@ -22,10 +22,10 @@
   <url type="bugtracker">https://github.com/wesenseged/Pagume/issues</url>
   <url type="vcs-browser">https://github.com/wesenseged/Pagume</url>
 
-   <branding>
-      <color type="primary" scheme_preference="light">#FAE9D6</color>
-      <color type="primary" scheme_preference="dark">#F09338</color>
-  </branding>
+  <branding>
+    <color type="primary" scheme_preference="light">#E9E2FF</color>
+    <color type="primary" scheme_preference="dark">#7250F2</color>
+</branding>
 
 
   <screenshots>
@@ -52,6 +52,14 @@
   <project_license>GPL-3.0-only</project_license>
 
 <releases>
+  <release version="0.0.3" date="2025-11-13">
+    <url type="details">https://github.com/wesenseged/Pagume/releases/tag/0.0.3</url>
+    <description>
+      <p>Update screenshot and summary</p>
+      <p>Fix README.md file</p>
+      <p>Good primary brand colors</p>
+    </description>
+  </release>
 
   <release version="0.0.2" date="2025-11-13">
     <url type="details">https://github.com/wesenseged/Pagume/releases/tag/0.0.2</url>

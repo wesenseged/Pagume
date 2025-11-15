@@ -18,7 +18,7 @@
 
 ### Flathub
 
-Use your system's app store to find Amharic Bible or run this command to install it.
+Use your system's app store to find Pagume or run this command to install it.
 
 ```BASH
 flatpak install flathub io.github.wesenseged.Pagume
