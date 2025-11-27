@@ -52,6 +52,15 @@
   <project_license>GPL-3.0-only</project_license>
 
 <releases>
+  <release version="0.0.4" date="2025-11-27">
+    <url type="details">https://github.com/wesenseged/Pagume/releases/tag/0.0.4</url>
+    <description>
+      <p>Toggle between amharic and arabic number</p>
+      <p>Add all 30 monthly holidays</p>
+      <p>Add category</p>
+    </description>
+  </release>
+
   <release version="0.0.3" date="2025-11-13">
     <url type="details">https://github.com/wesenseged/Pagume/releases/tag/0.0.3</url>
     <description>
@@ -75,6 +84,10 @@
     </description>
   </release>
 </releases>
+
+<categories>
+    <category>Utility</category>
+</categories>
 
 <keywords>
   <keyword>Ethiopia</keyword>

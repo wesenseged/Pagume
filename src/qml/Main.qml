@@ -7,9 +7,9 @@ import org.kde.kirigami as Kirigami
 Kirigami.ApplicationWindow {
     id: root
     width: 1100
-    height: 720
+    height: 800
     minimumWidth: 930
-    minimumHeight: 680
+    minimumHeight: 750
 
     ListModel {
         id: itemsModel

@@ -10,7 +10,6 @@ Kirigami.Page {
     property date today: new Date()
     property var ethToday: EthCal.toEthiopian(today.getFullYear(), today.getMonth() + 1, today.getDate())
     property string currentDay: ethToday.day
-    property var amharicNumbers: ["፩", "፪", "፫", "፬", "፭", "፮", "፯", "፰", "፱", "፲", "፲፩", "፲፪", "፲፫", "፲፬", "፲፭", "፲፮", "፲፯", "፲፰", "፲፱", "፳", "፳፩", "፳፪", "፳፫", "፳፬", "፳፭", "፳፮", "፳፯", "፳፰", "፳፱", "፴"]
 
     ListModel {
         id: monthlyHolidays
@@ -18,137 +17,152 @@ Kirigami.Page {
         ListElement {
             main: "ልደታ"
             other: "ራጉኤል፣ ኤልያስ"
-            day: "፩"
+            day: "1"
         }
         ListElement {
             main: "ታዴዎስ ሐዋርያ"
             other: "ኢዮብ ጻድቅ"
-            day: "፪"
+            day: "2"
         }
         ListElement {
             main: "በዓታ ማርያም"
-            other: "ዜና ማርቆስ፣ ነአኩቶ ለአብ"
-            day: "፫"
+            other: "ዜና ማርቆስ፣ ነአኩቶ ለአብ፣ ፋኑኤል"
+            day: "3"
         }
         ListElement {
             main: "ዮሐንስ ወልደ ነጎድጓድ"
-            other: ""
-            day: "፬"
+            other: "አባ መቃርዎስ፣ አባ አብርሐ"
+            day: "4"
         }
         ListElement {
             main: "ጴጥሮስ ወጳውሎስ"
             other: "አቡነ ገብረ መንፈስ ቅዱስ"
-            day: "፭"
+            day: "5"
         }
         ListElement {
             main: "ኢየሱስ"
             other: "ቁስቋም፣ አርሴማ ቅድስት"
-            day: "፮"
+            day: "6"
         }
         ListElement {
             main: "ሥላሴ"
             other: "ፊሊሞን፣ አብላንዮስ"
-            day: "፯"
+            day: "7"
         }
         ListElement {
             main: "ማቴዎስ"
             other: "ዮልያኖስ፣ አባ ኪሮስ"
-            day: "፰"
+            day: "8"
         }
         ListElement {
             main: "ቶማስ ሐዋርያ"
             other: "እንድርያስ ሐዋርያ፣ አርባ ሰማዕታት"
-            day: "፱"
+            day: "9"
         }
         ListElement {
             main: "በዓለ መስቀሉ ለእግዚእነ"
-            other: ""
-            day: "፲"
+            other: "ናትናኤል ሐዋርያ ፣ፀደንያ"
+            day: "10"
         }
         ListElement {
             main: "ሃና ወኢያቄም"
             other: "ቅዱስ ፋሲለደስ ሰማዕት"
-            day: "፲፩"
+            day: "11"
         }
         ListElement {
             main: "ቅዱስ ሚካኤል"
-            other: "ክርስቶስ ሠምራ"
-            day: "፲፪"
+            other: "ክርስቶስ ሠምራ፣ አባ ሳሙኤል"
+            day: "12"
         }
         ListElement {
             main: "እግዚአብሔር አብ"
             other: "ቅዱስ ሩፋኤል"
-            day: "፲፫"
+            day: "13"
         }
         ListElement {
             main: "አባ አረጋዊ"
             other: "አባ ገብረ ክርስቶስ"
-            day: "፲፬"
+            day: "14"
         }
         ListElement {
             main: "ቂርቆስና ኢየሉጣ"
             other: "ስልፋኮስ"
-            day: "፲፭"
+            day: "15"
         }
         ListElement {
             main: "ኪዳነ ምሕረት"
             other: "ሚካኤል ጳጳስ"
-            day: "፲፮"
+            day: "16"
         }
         ListElement {
             main: "ቅዱስ እስጢፋኖስ"
             other: "ሉቃስ ዘዓምደ ብርሃን"
-            day: "፲፯"
+            day: "17"
         }
         ListElement {
             main: "ፊልጶስ ሐዋርያ"
             other: "ኤዎስጣጤዎስ ሰማዕት"
-            day: "፲፰"
+            day: "18"
         }
         ListElement {
             main: "ቅዱስ ገብርኤል"
             other: "አርቃዲዎስ"
-            day: "፲፱"
+            day: "19"
         }
         ListElement {
             main: "ጽንሰታ ለማርያም"
             other: "ነቢዩ ኤልሳ፣ አባ ሰላማ"
-            day: "፳"
+            day: "20"
         }
         ListElement {
             main: "በዓለ እግዝእትነ ማርያም"
             other: ""
-            day: "፳፩"
+            day: "21"
         }
         ListElement {
             main: "ቅዱስ ዑራኤል"
             other: "ደቅስዮስ"
-            day: "፳፪"
+            day: "22"
         }
         ListElement {
             main: "ቅዱስ ጊዮርጊስ"
             other: "ለጊኖስ ሰማዕት"
-            day: "፳፫"
+            day: "23"
         }
         ListElement {
             main: "አቡነ ተክለ ሃይማኖት"
             other: ""
-            day: "፳፬"
+            day: "24"
+        }
+        ListElement {
+            main: "ቅዱስ መርቆሬዎስ"
+            other: "አቡነ ሀቢብ"
+            day: "25"
+        }
+        ListElement {
+            main: "ዮሴፍ"
+            other: "ቶማስ ዘህንደኬ፣ አቡነ ሀብተ ማርያም"
+            day: "26"
         }
         ListElement {
             main: "መድኃኔዓለም"
             other: "ሕዝቅያስ ነቢይ"
-            day: "፳፯"
+            day: "27"
+        }
+        ListElement {
+            main: "አማኑኤል"
+            other: "አበው አብርሃም ይስሐቅና ያዕቆብ"
+            day: "27"
         }
         ListElement {
             main: "በዓለ ወልድ"
-            other: "ሳሙኤል ዘወገግ"
-            day: "፳፱"
+            other: "ቅዱስ ላሊበላ፣ ቅድስት አርሴማ"
+            day: "29"
         }
         ListElement {
             main: "ማርቆስ ወንጌላዊ"
-            other: ""
-            day: "፴"
+            other: "ዮሐንስ መጥምቅ"
+            day: "30"
         }
     }
 
@@ -170,7 +184,7 @@ Kirigami.Page {
 
                 background: Rectangle {
                     radius: 8
-                    color: model.day === amharicNumbers[currentDay - 1] ? "#7e54ff" : Kirigami.Theme.backgroundColor
+                    color: model.day === currentDay ? "#7e54ff" : Kirigami.Theme.backgroundColor
                 }
 
                 contentItem: ColumnLayout {

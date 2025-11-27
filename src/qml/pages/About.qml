@@ -146,7 +146,7 @@ Kirigami.ScrollablePage {
                     ColumnLayout {
                         spacing: Kirigami.Units.smallSpacing
                         Kirigami.Heading {
-                            text: "KDE Frameworks 6.17.0"
+                            text: "KDE Frameworks 6.20.0"
                             level: 3
                             color: Kirigami.Theme.activeTextColor
                         }
@@ -158,7 +158,7 @@ Kirigami.ScrollablePage {
                     ColumnLayout {
                         spacing: Kirigami.Units.smallSpacing
                         Kirigami.Heading {
-                            text: "Qt 6.9.2 (built against 6.9.1)"
+                            text: "Qt 6.10.0 (built against 6.10.0)"
                             level: 3
                             color: Kirigami.Theme.activeTextColor
                         }

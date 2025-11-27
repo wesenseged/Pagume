@@ -1,5 +1,6 @@
 import QtQuick
 import QtQml
+import QtCore
 import QtQuick.Layouts
 import QtQuick.Controls as Controls
 import org.kde.kirigami as Kirigami
@@ -8,13 +9,20 @@ import "EthiopianCalendar.js" as EthCal
 Kirigami.Page {
     id: calendarPage
 
+    property bool isAmharic: appSettings.savedIsAmharic
     property var amharicNumbers: ["፩", "፪", "፫", "፬", "፭", "፮", "፯", "፰", "፱", "፲", "፲፩", "፲፪", "፲፫", "፲፬", "፲፭", "፲፮", "፲፯", "፲፰", "፲፱", "፳", "፳፩", "፳፪", "፳፫", "፳፬", "፳፭", "፳፮", "፳፯", "፳፰", "፳፱", "፴"]
+    property var arabicNumbers: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30"]
 
     property date today: new Date()
     property var ethToday: EthCal.toEthiopian(today.getFullYear(), today.getMonth() + 1, today.getDate())
 
     property int currentEthYear: ethToday.year
     property int currentEthMonth: ethToday.month
+
+    Settings {
+        id: appSettings
+        property bool savedIsAmharic: true
+    }
 
     // List of 13 Ethiopian Public Holidays
     ListModel {
@@ -86,6 +94,44 @@ Kirigami.Page {
             font.pointSize: 36
             horizontalAlignment: Text.AlignHCenter
             Layout.alignment: Qt.AlignHCenter
+        }
+
+        RowLayout {
+            spacing: 0
+            Layout.alignment: Qt.AlignHCenter
+            Rectangle {
+                implicitWidth: 40
+                implicitHeight: 36
+                radius: 8
+                color: calendarPage.isAmharic ? "#7e54ff" : Kirigami.Theme.backgroundColor
+                Controls.Label {
+                    anchors.centerIn: parent
+                    text: "፩"
+                    color: Kirigami.Theme.textColor
+                }
+                MouseArea {
+                    anchors.fill: parent
+                    // onClicked: calendarPage.isAmharic = true
+                    onClicked: appSettings.savedIsAmharic = true
+                }
+            }
+
+            Rectangle {
+                implicitWidth: 40
+                implicitHeight: 36
+                radius: 8
+                color: !calendarPage.isAmharic ? "#7e54ff" : Kirigami.Theme.backgroundColor
+                Controls.Label {
+                    anchors.centerIn: parent
+                    text: "1"
+                    color: Kirigami.Theme.textColor
+                }
+                MouseArea {
+                    anchors.fill: parent
+                    // onClicked: calendarPage.isAmharic = false
+                    onClicked: appSettings.savedIsAmharic = false
+                }
+            }
         }
 
         // Month switcher
@@ -191,7 +237,7 @@ Kirigami.Page {
 
                     Controls.Label {
                         anchors.centerIn: parent
-                        text: (typeof dayCell.validDay === "boolean" && dayCell.validDay && Array.isArray(calendarPage.amharicNumbers) && calendarPage.amharicNumbers.length > 0) ? (dayCell.dayNumber >= 1 && dayCell.dayNumber <= calendarPage.amharicNumbers.length ? calendarPage.amharicNumbers[dayCell.dayNumber - 1] : String(dayCell.dayNumber)) : ""
+                        text: calendarPage.isAmharic ? (typeof dayCell.validDay === "boolean" && dayCell.validDay && Array.isArray(calendarPage.amharicNumbers) && calendarPage.amharicNumbers.length > 0) ? (dayCell.dayNumber >= 1 && dayCell.dayNumber <= calendarPage.amharicNumbers.length ? calendarPage.amharicNumbers[dayCell.dayNumber - 1] : String(dayCell.dayNumber)) : "" : (typeof dayCell.validDay === "boolean" && dayCell.validDay && Array.isArray(calendarPage.arabicNumbers) && calendarPage.arabicNumbers.length > 0) ? (dayCell.dayNumber >= 1 && dayCell.dayNumber <= calendarPage.arabicNumbers.length ? calendarPage.arabicNumbers[dayCell.dayNumber - 1] : String(dayCell.dayNumber)) : ""
                         // text: validDay ? calendarPage.amharicNumbers[dayNumber - 1] : ""
                         color: isHoliday ? Kirigami.Theme.backgroundColor : Kirigami.Theme.textColor
                         font.bold: isHoliday
