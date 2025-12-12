@@ -52,6 +52,14 @@
   <project_license>GPL-3.0-only</project_license>
 
 <releases>
+
+  <release version="0.0.5" date="2025-12-12">
+    <url type="details">https://github.com/wesenseged/Pagume/releases/tag/0.0.5</url>
+    <description>
+      <p>add StartupWMClass</p>
+      <p>Remove duplicated day entry<p/>
+    </description>
+  </release>
   <release version="0.0.4" date="2025-11-27">
     <url type="details">https://github.com/wesenseged/Pagume/releases/tag/0.0.4</url>
     <description>

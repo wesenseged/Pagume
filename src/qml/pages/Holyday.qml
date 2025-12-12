@@ -152,7 +152,7 @@ Kirigami.Page {
         ListElement {
             main: "አማኑኤል"
             other: "አበው አብርሃም ይስሐቅና ያዕቆብ"
-            day: "27"
+            day: "28"
         }
         ListElement {
             main: "በዓለ ወልድ"

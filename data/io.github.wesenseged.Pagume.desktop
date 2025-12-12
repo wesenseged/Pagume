@@ -5,4 +5,5 @@ Icon=io.github.wesenseged.Pagume
 Type=Application
 Terminal=false
 Categories=Utility
+StartupWMClass=org.kde.io.github.wesenseged.Pagume
 
