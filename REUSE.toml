@@ -1,0 +1,73 @@
+version = 1
+
+[[annotations]]
+path = ["CMakeLists.txt", "**/CMakeLists.txt"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2025 Abenezer Wesenseged <wseged@proton.me>"
+SPDX-License-Identifier = "GPL-3.0-or-later"
+
+[[annotations]]
+path = ["Messages.sh", "**/Messages.sh"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2025 Abenezer Wesenseged <wseged@proton.me>"
+SPDX-License-Identifier = "GPL-3.0-or-later"
+
+[[annotations]]
+path = ["**.desktop", "**/**.desktop"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2025 Abenezer Wesenseged <wseged@proton.me>"
+SPDX-License-Identifier = "GPL-3.0-or-later"
+
+[[annotations]]
+path = "**/metadata.json"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2025 Abenezer Wesenseged <wseged@proton.me>"
+SPDX-License-Identifier = "GPL-3.0-or-later"
+
+[[annotations]]
+path = "**/png"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2025 Abenezer Wesenseged <wseged@proton.me>"
+SPDX-License-Identifier = "GPL-3.0-or-later"
+
+[[annotations]]
+path = "**/svg"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2025 Abenezer Wesenseged <wseged@proton.me>"
+SPDX-License-Identifier = "GPL-3.0-or-later"
+
+[[annotations]]
+path = ["README.md", "**/*.md"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2025 Abenezer Wesenseged <wseged@proton.me>"
+SPDX-License-Identifier = "GPL-3.0-or-later"
+
+[[annotations]]
+path = ["**/*.xml"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2025 Abenezer Wesenseged <wseged@proton.me>"
+SPDX-License-Identifier = "GPL-3.0-or-later"
+
+[[annotations]]
+path = ["**/*.json"]
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2025 Abenezer Wesenseged <wseged@proton.me>"
+SPDX-License-Identifier = "GPL-3.0-or-later"
+
+[[annotations]]
+path = "**/qmldir"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2025 Abenezer Wesenseged <wseged@proton.me>"
+SPDX-License-Identifier = "GPL-3.0-or-later"
+
+[[annotations]]
+path = "**/**.qrc"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2025 Abenezer Wesenseged <wseged@proton.me>"
+SPDX-License-Identifier = "GPL-3.0-or-later"
+
+[[annotations]]
+path = ".gitignore"
+precedence = "aggregate"
+SPDX-FileCopyrightText = "2025 Abenezer Wesenseged <wseged@proton.me>"
+SPDX-License-Identifier = "GPL-3.0-or-later"

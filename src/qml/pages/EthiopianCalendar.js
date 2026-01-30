@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2026 Abenezer Wesenseged <wseged@proton.me>
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 .pragma library
 
 const JD_EPOCH_OFFSET_AMETE_MIHRET = 1724220
