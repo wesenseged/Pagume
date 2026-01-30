@@ -32,7 +32,7 @@ int main(int argc, char *argv[]) {
       i18n("Pagume"), QStringLiteral("1.0"),
       i18n("A modern Ethiopian calendar app featuring major holidays and "
            "fasting periods."),
-      KAboutLicense::GPL_V3, i18n("© 2025 Wesenseged Community"));
+      KAboutLicense::GPL_V3, i18n("© 2026 Wesenseged Community"));
 
   KAboutData::setApplicationData(aboutData);
 

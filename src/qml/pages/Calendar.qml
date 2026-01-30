@@ -9,6 +9,7 @@ import "EthiopianCalendar.js" as EthCal
 Kirigami.Page {
     id: calendarPage
 
+    property var months: ["መስከረም", "ጥቅምት", "ኅዳር", "ታኅሣሥ", "ጥር", "የካቲት", "መጋቢት", "ሚያዝያ", "ግንቦት", "ሰኔ", "ሐምሌ", "ነሐሴ", "ጳጕሜን"]
     property bool isAmharic: appSettings.savedIsAmharic
     property var amharicNumbers: ["፩", "፪", "፫", "፬", "፭", "፮", "፯", "፰", "፱", "፲", "፲፩", "፲፪", "፲፫", "፲፬", "፲፭", "፲፮", "፲፯", "፲፰", "፲፱", "፳", "፳፩", "፳፪", "፳፫", "፳፬", "፳፭", "፳፮", "፳፯", "፳፰", "፳፱", "፴"]
     property var arabicNumbers: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30"]
@@ -53,7 +54,7 @@ Kirigami.Page {
             day: 27
         }
         ListElement {
-            name: "የድርግ ወደቀበት ቀን"
+            name: "ደርግ የወደቀበት ቀን"
             month: "ግንቦት"
             day: 20
         }
@@ -227,7 +228,7 @@ Kirigami.Page {
                         if (isHoliday)
                             return "#7e54ff";
                         if (calendarPage.currentEthYear === calendarPage.ethToday.year && calendarPage.currentEthMonth === calendarPage.ethToday.month && dayNumber === calendarPage.ethToday.day)
-                            return Kirigami.Theme.positiveTextColor;
+                            return "#52796f";
                         return Kirigami.Theme.backgroundColor;
                     }
 

@@ -51,7 +51,7 @@ Kirigami.ScrollablePage {
                         level: 3
                     }
                     Controls.Label {
-                        text: "© 2025 Abenezer Wesenseged"
+                        text: "© 2026 Abenezer Wesenseged"
                         color: Kirigami.Theme.disabledTextColor
                     }
                 }

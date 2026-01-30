@@ -89,15 +89,15 @@ function toEthiopian(gregYear, gregMonth, gregDay) {
 
 // Ethiopian month names
 const months = [
-    "መስከረም", "ጥቅምት", "ኅዳር", "ታኅሣስ",
+    "መስከረም", "ጥቅምት", "ኅዳር", "ታኅሣሥ",
     "ጥር", "የካቲት", "መጋቢት", "ሚያዝያ",
-    "ግንቦት", "ሰኔ", "ሐምሌ", "ነሐሴ", "ጳጉሜን"
+    "ግንቦት", "ሰኔ", "ሐምሌ", "ነሐሴ", "ጳጕሜን"
 ]
 
 // Ethiopian weekdays (start from Monday)
 const weekdays = [
-    "ሰኞ", "ማክሰኞ", "ረቡዕ", "ሐሙስ",
-    "ዓርብ", "ቅዳሜ", "እሑድ"
+    "ሰኞ", "ማክሰኞ", "ረቡዕ", "ኀሙስ",
+    "ዐርብ", "ቅዳሜ", "እሑድ"
 ]
 
 // Utility to find first weekday of Ethiopian month
