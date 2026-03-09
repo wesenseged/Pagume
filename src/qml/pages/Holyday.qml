@@ -188,35 +188,40 @@ Kirigami.Page {
 
                 background: Rectangle {
                     radius: 8
-                    color: model.day === currentDay ? "#7e54ff" : Kirigami.Theme.backgroundColor
+                    color: model.day === currentDay ? Kirigami.Theme.activeBackgroundColor : Kirigami.Theme.backgroundColor
                 }
 
                 contentItem: ColumnLayout {
                     anchors.fill: parent
                     anchors.margins: Kirigami.Units.smallSpacing
+                    RowLayout {
+                        Layout.fillWidth: true
 
-                    Controls.Label {
-                        text: model.main
-                        font.bold: true
-                        wrapMode: Text.WordWrap
-                        color: holidayButton.hovered ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
+                        Controls.Label {
+                            text: model.main
+                            font.bold: true
+                            wrapMode: Text.WordWrap
+                            Layout.fillWidth: true
+                            color: Kirigami.Theme.textColor
+                        }
+
+                        Controls.Label {
+                            text: model.day
+                            color: Kirigami.Theme.textColor
+                            horizontalAlignment: Text.AlignRight
+                        }
                     }
 
                     Controls.Label {
                         text: model.other
-                        color: Kirigami.Theme.disabledTextColor
+                        color: model.day === currentDay ? Kirigami.Theme.activeTextColor : Kirigami.Theme.disabledTextColor
                         wrapMode: Text.WordWrap
+                        Layout.maximumWidth: 100
                         visible: model.other.length > 0
                     }
 
                     Item {
                         Layout.fillHeight: true
-                    }
-
-                    Controls.Label {
-                        text: model.day
-                        color: holidayButton.hovered ? Kirigami.Theme.highlightedTextColor : Kirigami.Theme.textColor
-                        horizontalAlignment: Text.AlignRight
                     }
                 }
             }

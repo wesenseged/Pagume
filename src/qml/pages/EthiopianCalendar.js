@@ -42,7 +42,11 @@ function ethToJDN(year, month, day) {
 }
 
 function isEthiopianLeapYear(year) {
-    return (year - 2015) % 4 === 0
+    return (year + 1) % 4 === 0
+}
+
+function isGregorianLeapYear(year) {
+    return (year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0);
 }
 
 function jdnToEth(jdn) {

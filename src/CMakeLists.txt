@@ -16,7 +16,7 @@ ecm_target_qml_sources(Pagume
     qml/pages/Calendar.qml
     qml/pages/Holyday.qml
     qml/pages/About.qml
-    qml/pages/Fasting.qml
+    qml/pages/Convert.qml
 
     qml/pages/EthiopianCalendar.js
 )

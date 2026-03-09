@@ -26,8 +26,8 @@ Kirigami.ApplicationWindow {
             iconName: "emblem-favorite"
         }
         ListElement {
-            name: "Fasting"
-            iconName: "weather-clear"
+            name: "Convert"
+            iconName: "accessories-calculator"
         }
         ListElement {
             name: "About"
@@ -48,27 +48,21 @@ Kirigami.ApplicationWindow {
                 spacing: Kirigami.Units.smallSpacing
 
                 Repeater {
+                    id: navButton
                     model: itemsModel
                     delegate: Controls.ToolButton {
-                        icon.name: iconName ? iconName : "🎉"
+                        icon.name: model.iconName ? model.iconName : "🎉"
                         icon.width: 24
                         icon.height: 24
-                        Controls.ToolTip.text: name
+                        Controls.ToolTip.text: model.name
                         Controls.ToolTip.visible: hovered
+
                         checkable: true
-                        checked: pageLoader.source.toString().includes(name)
+                        checked: pageLoader.source.toString().includes(model.name)
                         width: 36
                         height: 36
                         onClicked: {
-                            if (name === "Calendar") {
-                                pageLoader.source = Qt.resolvedUrl("Calendar.qml");
-                            } else if (name === "Holyday") {
-                                pageLoader.source = Qt.resolvedUrl("Holyday.qml");
-                            } else if (name === "Fasting") {
-                                pageLoader.source = Qt.resolvedUrl("Fasting.qml");
-                            } else if (name === "About") {
-                                pageLoader.source = Qt.resolvedUrl("About.qml");
-                            }
+                            pageLoader.source = Qt.resolvedUrl(model.name + ".qml");
                         }
                     }
                 }
