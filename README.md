@@ -13,38 +13,52 @@
 
 ## Installation
 
+### Flathub
 > [!TIP]
 > You may need to [install Flatpak and add the Flathub repository](https://flathub.org/setup) if you haven't already.
-
-### Flathub
 
 Use your system's app store to find Pagume or run this command to install it.
 
 ```BASH
 flatpak install flathub io.github.wesenseged.Pagume
 ```
+##### Compiling manually
+
+Before proceeding, ensure that you have the necessary packages installed for Qt 6 and KDE Frameworks.
+
+```Bash
+git clone https://github.com/wesenseged/Pagume
+cd Pagume
+
+cmake -B build/ --install-prefix ~/.local
+cmake --build build/
+cmake --install build/
+Pagume
+```
+
+To uninstall:
+```BASH
+cmake --build build/ --target uninstall
+
+```
 ---
 
-## ✨ Features
+##  Features
 
-- 📅 **Full Ethiopian Calendar** — Navigate months and years easily.  
-- 🗓️ **Public Holidays** — Displays all major national holidays of Ethiopia.  
-- 🙏 **Fasting Periods** — Includes a list of the main fasting days in the Ethiopian Orthodox tradition.  
-- 🌗 **Dual Theme Support** — Matches your system’s light or dark mode.  
-- 🔍 **Modern UI** — Built with KDE Kirigami for a responsive and adaptive design.  
-- 🇪🇹 **Localized** — Uses Amharic labels and date format.  
-
----
-
-## 📜 License
-
-Pagume is licensed under the **GNU General Public License v3.0 or later (GPL-3.0-or-later)**.
-See the [LICENSES/GPL-3.0-or-later.txt](LICENSES/GPL-3.0-or-later.txt) file for more details.
+- Ethiopian Calendar  
+- Public Holidays
+- Ethiopian to Gregorian Calendar converter 
+- Gregorian to Ethiopian Calendar converter
+ 
 
 ---
 
-## 🪶 About the Name
+## License
 
-**Pagume (ጳጉሜ)** is the 13th month in the Ethiopian Calendar.
-The app is named after this unique month, symbolizing Ethiopia’s distinct and rich timekeeping tradition.
+Pagume is licensed under the **GNU General Public License v3.0 or later**
 
+---
+
+## Contributing
+
+Contributions and feedback are welcome! If you find a bug or want to suggest a feature, please [open an issue](https://github.com/wesenseged/Pagume/issues).

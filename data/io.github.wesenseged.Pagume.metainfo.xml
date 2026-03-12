@@ -7,7 +7,7 @@
   <summary>Ethiopian calendar</summary>
 
   <description>
-  <p>Pagume is an offline calendar that shows local dates, holidays, and fasting seasons, helping you stay connected to the traditional calendar alongside your modern desktop.</p>
+  <p>Pagume is an offline calendar that shows local dates, holidays, and Ethiopian to Gregorian date conversion, helping you stay connected to the traditional calendar alongside your modern desktop.</p>
   </description>
 
 
@@ -59,61 +59,6 @@
       <p>Add Gregorian to Ethiopian converter</p>
       <p>Remove Fasting Page</p>
       <p>Update application screenshots</p>
-    </description>
-  </release>
-
-  <release version="0.0.7" date="2026-1-30">
-    <url type="details">https://github.com/wesenseged/Pagume/releases/tag/0.0.7</url>
-    <description>
-      <p>Fix spelling mistakes across the project</p>
-      <p>Add proper REUSE (SPDX) licensing compliance</p>
-    </description>
-  </release>
-
-  <release version="0.0.6" date="2025-12-12">
-    <url type="details">https://github.com/wesenseged/Pagume/releases/tag/0.0.6</url>
-    <description>
-      <p>add StartupWMClass</p>
-    </description>
-  </release>
-
-  <release version="0.0.5" date="2025-12-12">
-    <url type="details">https://github.com/wesenseged/Pagume/releases/tag/0.0.5</url>
-    <description>
-      <p>add StartupWMClass</p>
-      <p>Remove duplicated day entry</p>
-    </description>
-  </release>
-
-  <release version="0.0.4" date="2025-11-27">
-    <url type="details">https://github.com/wesenseged/Pagume/releases/tag/0.0.4</url>
-    <description>
-      <p>Toggle between amharic and arabic number</p>
-      <p>Add all 30 monthly holidays</p>
-      <p>Add category</p>
-    </description>
-  </release>
-
-  <release version="0.0.3" date="2025-11-13">
-    <url type="details">https://github.com/wesenseged/Pagume/releases/tag/0.0.3</url>
-    <description>
-      <p>Update screenshot and summary</p>
-      <p>Fix README.md file</p>
-      <p>Good primary brand colors</p>
-    </description>
-  </release>
-
-  <release version="0.0.2" date="2025-11-13">
-    <url type="details">https://github.com/wesenseged/Pagume/releases/tag/0.0.2</url>
-    <description>
-      <p>Update branding color and add keywords</p>
-    </description>
-  </release>
-
-  <release version="0.0.1" date="2025-11-13">
-    <url type="details">https://github.com/wesenseged/Pagume/releases/tag/0.0.1</url>
-    <description>
-      <p>Initial public release of Pagume for KDE and Flathub</p>
     </description>
   </release>
 </releases>
