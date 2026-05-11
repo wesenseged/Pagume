@@ -54,7 +54,7 @@ Kirigami.Page {
         }
         ListElement {
             name: "የአርበኞች ቀን"
-            month: "ግንቦት"
+            month: "ሚያዝያ"
             day: 27
         }
         ListElement {

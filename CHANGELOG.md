@@ -10,7 +10,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Added CHANGELOG.md to document notable changes for each version. 
 
-## [0.0.8] - 2026-01-30
+### Changed
+- አርበኞች ቀን from ግንቦት 27 to ሚያዝያ 27
+
+## [0.0.8] - 2026-03-09
 
 ### Added
 - Add Ethiopian to Gregorian calendar converter
