@@ -41,24 +41,15 @@ To uninstall:
 cmake --build build/ --target uninstall
 
 ```
----
 
-##  Features
-
+### Features
 - Ethiopian Calendar  
 - Public Holidays
 - Ethiopian to Gregorian Calendar converter 
 - Gregorian to Ethiopian Calendar converter
  
-
----
-
-## License
-
+### License
 Pagume is licensed under the **GNU General Public License v3.0 or later**
 
----
-
-## Contributing
-
+### Contributing
 Contributions and feedback are welcome! If you find a bug or want to suggest a feature, please [open an issue](https://github.com/wesenseged/Pagume/issues).
