@@ -4,7 +4,7 @@
 
 #include <KAboutData>
 #include <KIconTheme>
-#include <KLocalizedContext>
+#include <KLocalizedQmlContext>
 #include <KLocalizedString>
 #include <QApplication>
 #include <QIcon>
@@ -47,8 +47,8 @@ int main(int argc, char *argv[]) {
                            });
 
   QQmlApplicationEngine engine;
+  KLocalization::setupLocalizedContext(&engine);
 
-  engine.rootContext()->setContextObject(new KLocalizedContext(&engine));
   engine.loadFromModule("io.github.wesenseged.Pagume", "Main");
 
   if (engine.rootObjects().isEmpty()) {

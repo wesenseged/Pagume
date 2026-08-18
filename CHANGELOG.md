@@ -4,14 +4,16 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
-
 ## [Unreleased]
+
+## [0.1.8] - 2026-08-18
 
 ### Added
 - Added CHANGELOG.md to document notable changes for each version. 
 
 ### Changed
 - አርበኞች ቀን from ግንቦት 27 to ሚያዝያ 27
+- Since 6.8. KLocalizedContext is deprecated use KLocalizedQmlContext or KLocalization::setupLocalizedContext()
 
 ## [0.0.8] - 2026-03-09
 
@@ -74,7 +76,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Initial public release of Pagume for KDE and Flathub.
 
-[Unreleased]: https://github.com/wesenseged/Pagume/compare/0.0.8...HEAD
+[Unreleased]: https://github.com/wesenseged/Pagume/compare/0.1.8...HEAD
+[0.1.8]: https://github.com/wesenseged/Pagume/releases/tag/0.1.8
 [0.0.8]: https://github.com/wesenseged/Pagume/releases/tag/0.0.8
 [0.0.7]: https://github.com/wesenseged/Pagume/releases/tag/0.0.7
 [0.0.6]: https://github.com/wesenseged/Pagume/releases/tag/0.0.6

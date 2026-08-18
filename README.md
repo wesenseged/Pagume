@@ -1,4 +1,4 @@
-<p align="center"><img width="128" src="https://wesen.vercel.app/projects/calendar.png">
+<p align="center"><img width="128" src="https://wesen.vercel.app/assets/calendar-0NWxBfhW.png">
 <h1 align="center">Pagume</h1>
 
 

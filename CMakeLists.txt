@@ -32,7 +32,7 @@ ecm_find_qmlmodule(org.kde.kirigami REQUIRED)
 add_subdirectory(src)
 
 # Install desktop file
-install(PROGRAMS data/io.github.wesenseged.Pagume.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+install(FILES data/io.github.wesenseged.Pagume.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 
 # Install icons for multiple sizes
 install(FILES data/icons/hicolor/128x128/apps/io.github.wesenseged.Pagume.png
