@@ -35,11 +35,17 @@ function jdnToGreg(jdn) {
     return { year, month, day }
 }
 
+
 function ethToJDN(year, month, day) {
-    const leapDays = Math.floor((year - 1) / 4)
+    const leapDays = Math.floor(year / 4)
     const daysInYear = 30 * (month - 1) + (day - 1)
-    return JD_EPOCH_OFFSET_AMETE_MIHRET + 365 * (year - 1) + leapDays + daysInYear
+
+    return JD_EPOCH_OFFSET_AMETE_MIHRET
+        + 365 * (year - 1)
+        + leapDays
+        + daysInYear
 }
+
 
 function isEthiopianLeapYear(year) {
     return (year + 1) % 4 === 0
@@ -97,7 +103,7 @@ function toEthiopian(gregYear, gregMonth, gregDay) {
 
 // Ethiopian month names
 const months = [
-    "መስከረም", "ጥቅምት", "ኅዳር", "ታኅሣሥ",
+    "መስከረም", "ጥቅምት", "ሕዳር", "ታኅሣሥ",
     "ጥር", "የካቲት", "መጋቢት", "ሚያዝያ",
     "ግንቦት", "ሰኔ", "ሐምሌ", "ነሐሴ", "ጳጕሜን"
 ]

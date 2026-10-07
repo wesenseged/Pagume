@@ -8,7 +8,7 @@ import QtQuick.Controls as Controls
 import org.kde.kirigami as Kirigami
 import "EthiopianCalendar.js" as EthCal
 
-Kirigami.Page {
+Kirigami.ScrollablePage {
     id: holidayPage
 
     property date today: new Date()
@@ -176,19 +176,22 @@ Kirigami.Page {
         columnSpacing: Kirigami.Units.largeSpacing
         rowSpacing: Kirigami.Units.largeSpacing
         Layout.alignment: Qt.AlignHCenter
-        anchors.margins: Kirigami.Units.largeSpacing
+        Layout.leftMargin: Kirigami.Units.largeSpacing
+        Layout.rightMargin: Kirigami.Units.largeSpacing + 10
 
         Repeater {
             model: monthlyHolidays
             delegate: Controls.Button {
                 id: holidayButton
-                Layout.preferredWidth: (holidayPage.width / 4) - (Kirigami.Units.largeSpacing * 2)
-                Layout.preferredHeight: 80
+                Layout.preferredWidth: (grid.width - (grid.columnSpacing * (grid.columns - 1))) / grid.columns
+
+                Layout.preferredHeight: holidayPage.height / 10
                 padding: 4
 
                 background: Rectangle {
                     radius: 8
-                    color: model.day === currentDay ? Kirigami.Theme.activeBackgroundColor : Kirigami.Theme.backgroundColor
+                    border.color: Kirigami.Theme.visitedLinkBackgroundColor
+                    color: model.day === currentDay ? Kirigami.Theme.visitedLinkColor : Kirigami.Theme.backgroundColor
                 }
 
                 contentItem: ColumnLayout {
@@ -214,7 +217,7 @@ Kirigami.Page {
 
                     Controls.Label {
                         text: model.other
-                        color: model.day === currentDay ? Kirigami.Theme.activeTextColor : Kirigami.Theme.disabledTextColor
+                        color: model.day === currentDay ? Kirigami.Theme.textColor : Kirigami.Theme.disabledTextColor
                         wrapMode: Text.WordWrap
                         Layout.maximumWidth: 100
                         visible: model.other.length > 0

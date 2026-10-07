@@ -12,8 +12,8 @@ Kirigami.ApplicationWindow {
     id: root
     width: 1100
     height: 800
-    minimumWidth: 930
-    minimumHeight: 750
+    minimumWidth: 700
+    minimumHeight: 700
 
     ListModel {
         id: itemsModel
@@ -51,7 +51,7 @@ Kirigami.ApplicationWindow {
                     id: navButton
                     model: itemsModel
                     delegate: Controls.ToolButton {
-                        icon.name: model.iconName ? model.iconName : "🎉"
+                        icon.name: model.iconName
                         icon.width: 24
                         icon.height: 24
                         Controls.ToolTip.text: model.name

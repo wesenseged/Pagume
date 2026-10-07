@@ -6,6 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
+## [0.2.8] - 2026-10-07
+
+### Added
+- Bahre Hasab to calculate all Fasting (ጾም) , Good Friday (ስቅለት) and Easter (ትንሣኤ).
+- Informative Badge for fasting days.
+
+### Fixed
+- Unable to display ገና due to a naming issue.
+
+
 ## [0.1.8] - 2026-08-18
 
 ### Added
@@ -76,7 +86,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Initial public release of Pagume for KDE and Flathub.
 
-[Unreleased]: https://github.com/wesenseged/Pagume/compare/0.1.8...HEAD
+[Unreleased]: https://github.com/wesenseged/Pagume/compare/0.2.8...HEAD
+[0.2.8]: https://github.com/wesenseged/Pagume/releases/tag/0.2.8
 [0.1.8]: https://github.com/wesenseged/Pagume/releases/tag/0.1.8
 [0.0.8]: https://github.com/wesenseged/Pagume/releases/tag/0.0.8
 [0.0.7]: https://github.com/wesenseged/Pagume/releases/tag/0.0.7

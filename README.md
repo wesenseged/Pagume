@@ -47,6 +47,8 @@ cmake --build build/ --target uninstall
 - Public Holidays
 - Ethiopian to Gregorian Calendar converter 
 - Gregorian to Ethiopian Calendar converter
+- Fasting Days
+- Geez &amp; Arabic Numerals
  
 ### License
 Pagume is licensed under the **GNU General Public License v3.0 or later**

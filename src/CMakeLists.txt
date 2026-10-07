@@ -17,8 +17,8 @@ ecm_target_qml_sources(Pagume
     qml/pages/Holyday.qml
     qml/pages/About.qml
     qml/pages/Convert.qml
-
     qml/pages/EthiopianCalendar.js
+    qml/pages/BehareHasab.js
 )
 
 target_link_libraries(Pagume

@@ -7,7 +7,17 @@
   <summary>Ethiopian calendar</summary>
 
   <description>
-  <p>Pagume is an offline calendar that shows local dates, holidays, and Ethiopian to Gregorian date conversion, helping you stay connected to the traditional calendar alongside your modern desktop.</p>
+  <p>Pagume is an offline Ethiopian calendar.</p>
+  <p>Features</p>
+	  <ul>
+	    <li></li>
+      <li>Ethiopian Calendar</li>
+      <li>Public Holidays</li>
+      <li>Ethiopian to Gregorian Converter</li>
+      <li>Gregorian to Ethiopian Converter</li>
+      <li>Fasting Days</li>
+      <li>Geez &amp; Arabic Numerals</li>
+	  </ul>
   </description>
 
 
@@ -52,13 +62,18 @@
   <project_license>GPL-3.0-or-later</project_license>
 
 <releases>
-  <release version="0.0.8" date="2026-3-9">
-    <url type="details">https://github.com/wesenseged/Pagume/releases/tag/0.0.8</url>
+  <release version="0.2.8" date="2026-10-07">
+    <url type="details">https://github.com/wesenseged/Pagume/releases/tag/0.2.8</url>
     <description>
-      <p>Add Ethiopian to Gregorian converter</p>
-      <p>Add Gregorian to Ethiopian converter</p>
-      <p>Remove Fasting Page</p>
-      <p>Update application screenshots</p>
+      <p>New</p>
+        <ul>
+      <li>Bahre Hasab to calculate all Fasting (ጾም) , Good Friday (ስቅለት) and Easter (ትንሣኤ).</li>
+      <li>Informative Badge for fasting days.</li>
+        </ul>
+        <p>Fixes</p>
+        <ul>
+      <li>Unable to display ገና due to a naming issue.</li>
+        </ul>
     </description>
   </release>
 </releases>
