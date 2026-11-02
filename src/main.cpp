@@ -34,7 +34,7 @@ int main(int argc, char *argv[]) {
   }
 
   KAboutData aboutData(
-      QStringLiteral("Pagume"), i18n("Pagume"), QStringLiteral("0.2.9"),
+      QStringLiteral("Pagume"), i18n("Pagume"), QStringLiteral("0.3.8"),
       i18n("Ethiopian calendar with main holidays"), KAboutLicense::GPL_V3,
       i18n("© 2026 Abenezer Wesenseged"), QString{},
       QStringLiteral("https://github.com/wesenseged/Pagume"));
