@@ -12,6 +12,8 @@
 #include <QQuickStyle>
 #include <QUrl>
 #include <QtQml>
+#include <kaboutdata.h>
+#include <qhashfunctions.h>
 
 int main(int argc, char *argv[]) {
   KIconTheme::initTheme();
@@ -32,15 +34,20 @@ int main(int argc, char *argv[]) {
   }
 
   KAboutData aboutData(
-      QStringLiteral("io.github.wesenseged.Pagume"), // not "org.kde."
-      i18n("Pagume"), QStringLiteral("1.0"),
-      i18n("A modern Ethiopian calendar app featuring major holidays and "
-           "fasting periods."),
-      KAboutLicense::GPL_V3, i18n("© 2026 Wesenseged Community"));
+      QStringLiteral("Pagume"), i18n("Pagume"), QStringLiteral("0.2.9"),
+      i18n("Ethiopian calendar with main holidays"), KAboutLicense::GPL_V3,
+      i18n("© 2026 Abenezer Wesenseged"), QString{},
+      QStringLiteral("https://github.com/wesenseged/Pagume"));
 
+  aboutData.setProgramLogo(app.windowIcon());
+  aboutData.setUrl(KAboutData::Donation, QString{});
+  aboutData.addAuthor(i18n("Abenezer Wesenseged"), i18n("Development"),
+                      QStringLiteral("wseged@proton.me"));
+  aboutData.setBugAddress(
+      QByteArrayLiteral("https://github.com/wesenseged/Pagume/issues"));
   KAboutData::setApplicationData(aboutData);
 
-  qmlRegisterSingletonType("org.wesen.about", 1, 0, "About",
+  qmlRegisterSingletonType("org.wesen.about", 1, 0, "KAbout",
                            [](QQmlEngine *engine, QJSEngine *) -> QJSValue {
                              return engine->toScriptValue(
                                  KAboutData::applicationData());
