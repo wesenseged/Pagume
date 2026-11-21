@@ -12,8 +12,8 @@ Kirigami.ApplicationWindow {
     id: root
     width: 1100
     height: 800
-    minimumWidth: 700
-    minimumHeight: 700
+    minimumWidth: 360
+    minimumHeight: 800
 
     ListModel {
         id: itemsModel
@@ -35,45 +35,48 @@ Kirigami.ApplicationWindow {
         }
     }
 
-    RowLayout {
+    Controls.SwipeView {
+        id: swipeView
         anchors.fill: parent
-        Rectangle {
-            id: sideBar
-            Layout.preferredWidth: 80
-            color: Kirigami.Theme.backgroundColor
-            Layout.fillHeight: true
+        clip: true
+        onCurrentIndexChanged: footer.currentIndex = currentIndex
+        Calendar {
+            id: calendar
+        }
+        Holyday {
+            id: holyday
+        }
+        Convert {
+            id: convert
+        }
+        About {
+            id: about
+        }
+    }
 
-            Column {
-                anchors.centerIn: parent
-                spacing: Kirigami.Units.smallSpacing
-
-                Repeater {
-                    id: navButton
-                    model: itemsModel
-                    delegate: Controls.ToolButton {
-                        icon.name: model.iconName
-                        icon.width: 24
-                        icon.height: 24
-                        Controls.ToolTip.text: model.name
-                        Controls.ToolTip.visible: hovered
-
-                        checkable: true
-                        checked: pageLoader.source.toString().includes(model.name)
-                        width: 36
-                        height: 36
-                        onClicked: {
-                            pageLoader.source = Qt.resolvedUrl(model.name + ".qml");
-                        }
-                    }
-                }
+    footer: Kirigami.NavigationTabBar {
+        actions: [
+            Kirigami.Action {
+                icon.name: "view-calendar"
+                text: "Calendar"
+                checked: true
+                onTriggered: swipeView.currentIndex = footer.currentIndex
+            },
+            Kirigami.Action {
+                icon.name: "emblem-favorite"
+                text: "Holyday"
+                onTriggered: swipeView.currentIndex = footer.currentIndex
+            },
+            Kirigami.Action {
+                icon.name: "accessories-calculator"
+                text: "Convert"
+                onTriggered: swipeView.currentIndex = footer.currentIndex
+            },
+            Kirigami.Action {
+                icon.name: "help-about"
+                text: "About"
+                onTriggered: swipeView.currentIndex = footer.currentIndex
             }
-        }
-
-        Loader {
-            id: pageLoader
-            Layout.fillWidth: true
-            Layout.fillHeight: true
-            source: Qt.resolvedUrl("Calendar.qml")
-        }
+        ]
     }
 }

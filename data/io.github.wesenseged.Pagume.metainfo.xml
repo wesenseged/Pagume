@@ -31,6 +31,15 @@
   <url type="bugtracker">https://github.com/wesenseged/Pagume/issues</url>
   <url type="vcs-browser">https://github.com/wesenseged/Pagume</url>
 
+<requires>
+    <display_length compare="ge">360</display_length>
+  </requires>
+  <supports>
+    <control>keyboard</control>
+    <control>pointing</control>
+    <control>touch</control>
+  </supports>
+
   <branding>
     <color type="primary" scheme_preference="light">#E9E2FF</color>
     <color type="primary" scheme_preference="dark">#7250F2</color>
@@ -43,12 +52,16 @@
           <caption>Calendar</caption>
     </screenshot>
     <screenshot >
-      <image>https://raw.githubusercontent.com/wesenseged/Pagume/main/screenshots/Holiday.png</image>
-    <caption>Holiday (dark mode)</caption>
+      <image>https://raw.githubusercontent.com/wesenseged/Pagume/main/screenshots/Calendar-mobile.png</image>
+    <caption>Calendar (mobile mode)</caption>
     </screenshot>
     <screenshot >
       <image>https://raw.githubusercontent.com/wesenseged/Pagume/main/screenshots/Converter.png</image>
-          <caption>Converter (dark mode)</caption>
+          <caption>Converter</caption>
+    </screenshot>
+    <screenshot >
+      <image>https://raw.githubusercontent.com/wesenseged/Pagume/main/screenshots/Converter-mobile.png</image>
+          <caption>Converter (mobile mode)</caption>
     </screenshot>
   </screenshots>
 
@@ -61,17 +74,17 @@
   <project_license>GPL-3.0-or-later</project_license>
 
 <releases>
-  <release version="0.2.8" date="2026-10-07">
-    <url type="details">https://github.com/wesenseged/Pagume/releases/tag/0.2.8</url>
+  <release version="0.3.9" date="2026-11-21">
+    <url type="details">https://github.com/wesenseged/Pagume/releases/tag/0.3.9</url>
     <description>
-      <p>New</p>
+      <p>Change</p>
         <ul>
-      <li>Bahre Hasab to calculate all Fasting (ጾም) , Good Friday (ስቅለት) and Easter (ትንሣኤ).</li>
-      <li>Informative Badge for fasting days.</li>
+          <li>Redesign navigation tab for responsive design.</li>
+          <li>የብሔር ብሔረሰቦች ቀን from ሕዳር 17 to ሕዳር 29</li>
         </ul>
         <p>Fixes</p>
         <ul>
-      <li>Unable to display ገና due to a naming issue.</li>
+      <li>Mobile view</li>
         </ul>
     </description>
   </release>

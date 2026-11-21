@@ -14,6 +14,7 @@ import "BehareHasab.js" as BahireHasab
 Kirigami.ScrollablePage {
     id: calendarPage
 
+    property bool mobileLayout: Kirigami.Settings.isMobile || width < 600
     property var months: ["መስከረም", "ጥቅምት", "ሕዳር", "ታኅሣሥ", "ጥር", "የካቲት", "መጋቢት", "ሚያዝያ", "ግንቦት", "ሰኔ", "ሐምሌ", "ነሐሴ", "ጳጕሜን"]
     property var amharicNumbers: ["፩", "፪", "፫", "፬", "፭", "፮", "፯", "፰", "፱", "፲", "፲፩", "፲፪", "፲፫", "፲፬", "፲፭", "፲፮", "፲፯", "፲፰", "፲፱", "፳", "፳፩", "፳፪", "፳፫", "፳፬", "፳፭", "፳፮", "፳፯", "፳፰", "፳፱", "፴"]
     property var arabicNumbers: ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30"]
@@ -62,7 +63,7 @@ Kirigami.ScrollablePage {
         publicHolidays.append({
             name: "የብሔር ብሔረሰቦች ቀን",
             month: "ሕዳር",
-            day: 17,
+            day: 29,
             fast: false
         });
 
@@ -173,15 +174,13 @@ Kirigami.ScrollablePage {
     }
 
     ColumnLayout {
-        anchors.top: parent.top
-        anchors.topMargin: Kirigami.Units.largeSpacing * 2
         spacing: Kirigami.Units.largeSpacing * 1.5
         Layout.alignment: Qt.AlignHCenter
 
+        // Month Heading
         Kirigami.Heading {
             text: (calendarPage.currentEthMonth >= 1 && calendarPage.currentEthMonth <= EthCal.months.length) ? EthCal.months[calendarPage.currentEthMonth - 1] : ""
-            font.pointSize: calendarPage.height < 750 ? 24 : 36
-
+            font.pointSize: calendarPage.mobileLayout ? 24 : 36
             horizontalAlignment: Text.AlignHCenter
             Layout.alignment: Qt.AlignHCenter
         }
@@ -225,6 +224,7 @@ Kirigami.ScrollablePage {
             }
         }
 
+        // Fasting switch
         RowLayout {
             Layout.alignment: Qt.AlignHCenter
             Controls.Switch {
@@ -253,7 +253,7 @@ Kirigami.ScrollablePage {
 
             Controls.Label {
                 text: calendarPage.currentEthYear + " ዓ.ም"
-                font.pointSize: 20
+                font.pointSize: calendarPage.mobileLayout ? 14 : 20
                 font.bold: true
             }
 
@@ -284,7 +284,7 @@ Kirigami.ScrollablePage {
                     opacity: 0.8
                     Controls.Label {
                         anchors.centerIn: parent
-                        text: modelData
+                        text: calendarPage.mobileLayout ? modelData.substring(0, 1) : modelData
                         color: Kirigami.Theme.textColor
                         font.pointSize: 14
                     }
@@ -380,9 +380,22 @@ Kirigami.ScrollablePage {
 
                     Controls.Label {
                         anchors.centerIn: parent
-                        text: calendarPage.isAmharic ? (typeof dayCell.validDay === "boolean" && dayCell.validDay && Array.isArray(calendarPage.amharicNumbers) && calendarPage.amharicNumbers.length > 0) ? (dayCell.dayNumber >= 1 && dayCell.dayNumber <= calendarPage.amharicNumbers.length ? calendarPage.amharicNumbers[dayCell.dayNumber - 1] : String(dayCell.dayNumber)) : "" : (typeof dayCell.validDay === "boolean" && dayCell.validDay && Array.isArray(calendarPage.arabicNumbers) && calendarPage.arabicNumbers.length > 0) ? (dayCell.dayNumber >= 1 && dayCell.dayNumber <= calendarPage.arabicNumbers.length ? calendarPage.arabicNumbers[dayCell.dayNumber - 1] : String(dayCell.dayNumber)) : ""
+                        property string dayText: {
+                            if (!dayCell.validDay)
+                                return "";
+
+                            var numbers = calendarPage.isAmharic ? calendarPage.amharicNumbers : calendarPage.arabicNumbers;
+
+                            if (!numbers || numbers.length === 0)
+                                return "";
+
+                            var index = dayCell.dayNumber - 1;
+
+                            return index >= 0 && index < numbers.length ? numbers[index] : String(dayCell.dayNumber);
+                        }
+                        text: dayText
                         font.weight: dayCell.isHoliday ? Font.Bold : Font.Light
-                        font.pointSize: 16
+                        font.pointSize: calendarPage.mobileLayout ? 10 : 16
                         color: dayCell.isHoliday ? Kirigami.Theme.backgroundColor : Kirigami.Theme.textColor
                     }
                 }
@@ -390,19 +403,24 @@ Kirigami.ScrollablePage {
         }
 
         // holidays list
-        GridLayout {
-            rows: 3
-            flow: GridLayout.TopToBottom
-            rowSpacing: 4
-            columnSpacing: 40
-            Layout.leftMargin: calendarPage.width / 6
+        Flow {
+            spacing: Kirigami.Units.largeSpacing
+            Layout.leftMargin: calendarPage.mobileLayout ? 0 : calendarPage.width / 6
             Layout.fillWidth: true
             Repeater {
                 model: publicHolidays
                 delegate: Controls.Label {
                     text: model.month + " " + model.day + " - " + model.name
-                    color: "#7e54ff"
-                    font.pointSize: calendarPage.height < 800 ? 12 : 16
+                    color: Kirigami.Theme.textColor
+                    leftPadding: 10
+                    rightPadding: 10
+                    background: Rectangle {
+                        color: Kirigami.Theme.backgroundColor
+                        radius: 6
+                        border.color: "#9573fc"
+                        border.width: 2
+                    }
+                    font.pointSize: calendarPage.mobileLayout ? 12 : 16
                     visible: model.month === monthName(calendarPage.currentEthMonth) && (!model.fast || appSettings.fastIsOn)
                 }
             }

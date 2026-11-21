@@ -11,6 +11,7 @@ import "EthiopianCalendar.js" as EthCal
 Kirigami.Page {
     id: convertPage
 
+    property bool mobileLayout: Kirigami.Settings.isMobile || width < 600
     property date today: new Date()
     property var ethToday: EthCal.toEthiopian(today.getFullYear(), today.getMonth() + 1, today.getDate())
 
@@ -176,7 +177,8 @@ Kirigami.Page {
                 opacity: 0.7
             }
 
-            RowLayout {
+            Flow {
+                flow: convertPage.mobileLayout ? Flow.TopToBottom : Flow.LeftToRight
                 spacing: Kirigami.Units.largeSpacing
                 Layout.alignment: Qt.AlignCenter
 
@@ -236,7 +238,7 @@ Kirigami.Page {
             Kirigami.Heading {
                 id: resultText
                 text: "M / D / Y"
-                font.pointSize: 24
+                font.pointSize: convertPage.mobileLayout ? 16 : 24
                 color: Kirigami.Theme.activeTextColor
                 Layout.alignment: Qt.AlignCenter
             }

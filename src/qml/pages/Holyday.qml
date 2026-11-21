@@ -11,6 +11,7 @@ import "EthiopianCalendar.js" as EthCal
 Kirigami.ScrollablePage {
     id: holidayPage
 
+    property bool mobileLayout: Kirigami.Settings.isMobile || width < 600
     property date today: new Date()
     property var ethToday: EthCal.toEthiopian(today.getFullYear(), today.getMonth() + 1, today.getDate())
     property string currentDay: ethToday.day
@@ -172,7 +173,7 @@ Kirigami.ScrollablePage {
 
     GridLayout {
         id: grid
-        columns: 4
+        columns: holidayPage.mobileLayout ? 2 : 4
         columnSpacing: Kirigami.Units.largeSpacing
         rowSpacing: Kirigami.Units.largeSpacing
         Layout.alignment: Qt.AlignHCenter
@@ -202,7 +203,7 @@ Kirigami.ScrollablePage {
 
                         Controls.Label {
                             text: model.main
-                            font.bold: true
+                            font.bold: holidayPage.mobileLayout ? false : true
                             wrapMode: Text.WordWrap
                             Layout.fillWidth: true
                             color: Kirigami.Theme.textColor
@@ -211,6 +212,7 @@ Kirigami.ScrollablePage {
                         Controls.Label {
                             text: model.day
                             color: Kirigami.Theme.textColor
+                            font.pointSize: holidayPage.mobileLayout ? 7 : 10
                             horizontalAlignment: Text.AlignRight
                         }
                     }

@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 ## [Unreleased]
 
+## [0.3.9] - 2026-11-21
+
+### Changed
+- Redesign navigation tab for responsive design.
+- የብሔር ብሔረሰቦች ቀን from ሕዳር 17 to ሕዳር 29
+
+### Fixed
+- Mobile view
+
 ## [0.3.8] - 2026-11-02
 
 ### Changed
@@ -94,7 +103,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 Initial public release of Pagume for KDE and Flathub.
 
-[Unreleased]: https://github.com/wesenseged/Pagume/compare/0.3.8...HEAD
+[Unreleased]: https://github.com/wesenseged/Pagume/compare/0.3.9...HEAD
+[0.3.9]: https://github.com/wesenseged/Pagume/releases/tag/0.3.9
 [0.3.8]: https://github.com/wesenseged/Pagume/releases/tag/0.3.8
 [0.2.8]: https://github.com/wesenseged/Pagume/releases/tag/0.2.8
 [0.1.8]: https://github.com/wesenseged/Pagume/releases/tag/0.1.8
